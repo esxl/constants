@@ -19,8 +19,7 @@
     "prettier": "2.7.1",
     "rollup": "^2.70.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.6.3",
-    "yo": "^4.3.0"
+    "typescript": "^4.6.3"
   },
   "engines": {
     "node": ">=16.13.1 <18",
