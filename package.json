@@ -1,0 +1,61 @@
+{
+  "bugs": {
+    "url": "https://github.com/esxl/constants/issues"
+  },
+  "description": "Non-secret constants for reuse across projects",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.26",
+    "@esxl/config-typescript": "0.1.0",
+    "husky": "^7.0.4",
+    "is-ci": "^3.0.1",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.7",
+    "prettier": "2.6.1",
+    "rollup": "^2.70.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3",
+    "yo": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=16.13.1 <18",
+    "npm": ">=8.1.2 <9"
+  },
+  "exports": {
+    "import": "./dist/constants.mjs",
+    "require": "./dist/constants.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/esxl/constants#readme",
+  "license": "SEE LICENSE IN README.md",
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "main": "./dist/constants.cjs",
+  "name": "@esxl/constants",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esxl/constants.git"
+  },
+  "scripts": {
+    "build": "rollup --config .rollup.config.ts --configPlugin '@rollup/plugin-babel={ babelHelpers: \"runtime\" }'",
+    "format:check": "prettier --check --ignore-unknown .",
+    "format:fix": "prettier --ignore-unknown --write .",
+    "postversion": "git push origin --follow-tags",
+    "prepare": "is-ci || husky install",
+    "pre-commit": "lint-staged",
+    "preversion": "npm run format:check && npm run types && npm test && npm run build",
+    "test": "jest",
+    "types": "tsc --listEmittedFiles"
+  },
+  "type": "module",
+  "types": "./dist/types/index.d.ts",
+  "version": "0.0.0"
+}
