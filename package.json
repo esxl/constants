@@ -10,7 +10,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@rollup/plugin-babel": "^6.0.0",
     "@types/jest": "^29.2.0",
-    "@types/node": "^16.11.66",
+    "@types/node": "^16.11.68",
     "@esxl/config-typescript": "0.3.0",
     "husky": "^8.0.1",
     "is-ci": "^3.0.1",
