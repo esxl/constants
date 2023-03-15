@@ -9,7 +9,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.21.0",
     "@rollup/plugin-babel": "^6.0.3",
-    "@types/jest": "^29.4.0",
+    "@types/jest": "^29.4.2",
     "@types/node": "^16.18.14",
     "@esxl/config-typescript": "0.3.0",
     "husky": "^8.0.3",
