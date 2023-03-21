@@ -4,6 +4,6 @@
     "outDir": "./dist"
   },
   "exclude": ["./src/__tests__/"],
-  "extends": "@esxl/config-typescript",
+  "extends": "@esxl/config-typescript-base",
   "include": ["./src/**/*.ts"]
 }
