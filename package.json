@@ -52,6 +52,7 @@
     "pre-commit": "lint-staged",
     "preversion": "npm run format:check && npm run types && npm test && npm run build",
     "test": "jest",
+    "test:debug": "jest --debug --detectOpenHandles --runInBand",
     "types": "tsc --listEmittedFiles"
   },
   "type": "module",
